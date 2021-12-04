@@ -9,7 +9,7 @@ import { conectarBD } from './db/db.js';
 import jwt from 'express-jwt';
 import jwks from 'jwks-rsa';
 
-import rutasVehiculo from './views/vehiculos/rutas.js';
+import rutasArticulo from './views/articulos/rutas.js';
 import rutasUsuario from './views/usuarios/rutas.js';
 import rutasVenta from './views/ventas/rutas.js';
 import autorizacionEstadoUsuario from './middleware/autorizacionEstadoUsuario.js';
@@ -38,7 +38,7 @@ app.use(jwtCheck);
 
 // app.use(autorizacionEstadoUsuario);
 
-app.use(rutasVehiculo);
+app.use(rutasArticulo);
 app.use(rutasUsuario);
 app.use(rutasVenta);
 
