@@ -10,8 +10,11 @@ const queryAllArticles = async (callback) => {
 const crearArticulo = async (datosArticulo, callback) => {
   if (
     Object.keys(datosArticulo).includes('name') &&
-    Object.keys(datosArticulo).includes('brand') &&
-    Object.keys(datosArticulo).includes('model')
+    Object.keys(datosArticulo).includes('category') &&
+    Object.keys(datosArticulo).includes('description') &&
+    Object.keys(datosArticulo).includes('precio') &&
+    Object.keys(datosArticulo).includes('unit') &&
+    Object.keys(datosArticulo).includes('cantidad')
   ) {
     const baseDeDatos = getDB();
     // implementar código para crear Artículo en la BD
